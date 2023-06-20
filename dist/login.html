@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+    <title>Karts R Us</title>
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(254, 205, 114);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Karts R Us</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="home-link" class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <li class="nav-item">
+                        <a id="logout-link" class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <div id="hero" class="container-fluid d-flex align-items-center justify-content-center text-center">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="hero-text">
+                    <h1>Karts R Us</h1>
+                    <h3>All Your Karting Needs!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN DIV -->
+    <div id="login" class="container-fluid d-flex flex-column align-items-center justify-content-center">
+        <h1>Login</h1>
+        <h4>Please login to begin, if you don't have an account one will be generated!</h4>
+        <div class="forms">
+            <form id="forms-login">
+                <!-- USERNAME -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- AGE -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" required>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button id="login-button" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SHOP -->
+    <div id="shop" class="container custom-hidden">
+        <div id="shopItems" class="card-deck">
+            <!-- CARD FOR ITEM -->
+            <div class="card">
+                <img src="./img/item-for-shop/bullet-bill.png" class="card-img-top" alt="Bullet Bill">
+                <div class="card-body">
+                    <h5 class="card-title">Bullet Bill - 25 Coins</h5>
+                    <p class="card-text">Losing the battle? Want to race ahead in a dangerous, yet fabulous manner?
+                        Look no further than our new friend Bullet Bill!</p>
+                    <a href="#" class="btn btn-bottom-left" style="background-color: gold;">Add to
+                        Cart</a>
+                </div>
+            </div>
+
+            <!-- CARD FOR ITEM -->
+            <div class="card">
+                <img src="./img/item-for-shop/banana.png" class="card-img-top" alt="Banana">
+                <div class="card-body">
+                    <h5 class="card-title">Banana Peel - 15 Coins</h5>
+                    <p class="card-text">Someone on your tail? Want to ruin someone's race in a comical style? We
+                        got
+                        you covered with our Deluxe Banana Peel!</p>
+                    <a href="#" class="btn btn-bottom-left" style="background-color: gold;">Add to
+                        Cart</a>
+                </div>
+            </div>
+
+            <!-- CARD FOR ITEM -->
+            <div class="card">
+                <img src="./img/item-for-shop/blue-shell.png" class="card-img-top" alt="Blue Shell">
+                <div class="card-body">
+                    <h5 class="card-title">Blue Shell - 40 Coins</h5>
+                    <p class="card-text">No one likes second place, or twelfth, we don't judge here. Almost like
+                        cheating, throw this mystical Blue Shell to hit the leader and anyone near!</p>
+                    <a href="#" class="btn btn-bottom-left" style="background-color: gold;">Add to
+                        Cart</a>
+                </div>
+            </div>
+
+            <!-- CARD FOR ITEM -->
+            <div class="card">
+                <img src="./img/item-for-shop/star-power.png" class="card-img-top" alt="Star Power">
+                <div class="card-body">
+                    <h5 class="card-title">Star Power - 35 Coins</h5>
+                    <p class="card-text">Sometimes there is just too much on the road, items or people. Want to be
+                        invincible? Get yourself a Star Power, just don't go off the edge... we haven't perfected
+                        it,
+                        geez!</p>
+                    <a href="#" class="btn btn-bottom-left" style="background-color: gold;">Add to
+                        Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART -->
+    <div id="cart" class="container custom-hidden">
+        <h1>Cart</h1>
+        <div id="cart-items">
+            <!-- CART ITEMS WILL BE APPENDED HERE -->
+        </div>
+        <div id="cart-total">
+            <h3>Total: <span id="cart-total-amount">0</span> Coins</h3>
+        </div>
+        <div id="cart-checkout">
+            <button id="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
